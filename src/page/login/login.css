@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Container chính */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5); /* Làm mờ nền xung quanh */
+}
+
+/* Nền bị làm mờ bên ngoài */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/image/Copy\ of\ wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Hiệu ứng mờ */
+  z-index: -1; /* Đặt dưới các phần tử khác */
+}
+
+/* Khung đăng nhập */
+.login-box {
+  background-image: url('/public/image/Copy\ of\ wallpaper.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+  z-index: 1; 
+}
+
+.login-title {
+  padding-top: 20px;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: #E4E4E4;
+  
+  
+}
+.input-field ::placeholder{
+ 
+  color: #333;
+}
+.input-field:focus {
+  color: #333; 
+  background-color: #fff; 
+  
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f4b860;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.login-button:hover {
+  background-color: #f39b38;
+}
+
+.divider {
+  margin: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.divider span {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.social-button img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.gmail-button {
+  background-color: white;
+}
+
+.facebook-button {
+  background-color: white;
+}
+
+.signup-text {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #B2B2B2;
+}
+
+.signup-link {
+  color: #FFDB5C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.box {
+  padding-left: 3px;
+  font-weight: bold;
+}
+
+.forgot-password {
+  color: #B2B2B2;
+}
